@@ -22,17 +22,13 @@ public class GUI {
 	private JButton Encender;
 	private GroupLayout groupLayout;
 	private JButton Apagar;
-	private JTextField textField;
 	private JLabel radio;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
-	private JButton Guardar;
 	private JButton Anterior;
 	private JButton Siguiente;
-	private JTextField textField_3;
 	private JButton siete;
 	private JButton ocho;
 	private JButton nueve;
@@ -93,9 +89,6 @@ public class GUI {
 			}
 		});
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		
 		radio = new JLabel("RADIO");
 		radio.setFont(new Font("Lucida Grande", Font.ITALIC, 15));
 		
@@ -105,17 +98,9 @@ public class GUI {
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
 		
-		lblNewLabel_1 = new JLabel("Nombre\n");
-		
 		lblNewLabel_2 = new JLabel("AM/FM");
 		
 		lblNewLabel_3 = new JLabel("Emisora");
-		
-		Guardar = new JButton("Guardar");
-		Guardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		
 		Anterior = new JButton("Anterior");
 		Anterior.addActionListener(new ActionListener() {
@@ -128,9 +113,6 @@ public class GUI {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
@@ -148,52 +130,43 @@ public class GUI {
 		});
 		groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
+			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+					.addContainerGap(70, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 						.addGroup(groupLayout.createSequentialGroup()
-							.addContainerGap(65, Short.MAX_VALUE)
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(lblNewLabel_2)
-								.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(lblNewLabel_3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+							.addComponent(lblNewLabel_3)
 							.addGap(23)
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField_2, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE)))
-						.addComponent(Siguiente, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(82, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(57)
-					.addComponent(Anterior)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(Guardar)
-					.addContainerGap(200, Short.MAX_VALUE))
-				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-					.addGap(15)
-					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 402, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(34, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addComponent(Encender)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-							.addComponent(Apagar, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
-							.addGap(97)
-							.addComponent(radio)
-							.addGap(70))
+							.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(12)
-							.addComponent(AM)
+							.addComponent(lblNewLabel_2)
+							.addGap(23)
+							.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(Anterior)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(Siguiente, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE)
+							.addGap(41)))
+					.addContainerGap(84, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap(10, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(panel, GroupLayout.PREFERRED_SIZE, 402, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(Encender)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(FM, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())))
-				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-					.addGap(174)
-					.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(212, Short.MAX_VALUE))
+							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(Apagar, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
+									.addGap(97)
+									.addComponent(radio)
+									.addGap(70))
+								.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+									.addComponent(AM)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(FM, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED)))))
+					.addGap(19))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -203,15 +176,11 @@ public class GUI {
 						.addComponent(Encender)
 						.addComponent(Apagar)
 						.addComponent(radio))
-					.addGap(18)
+					.addGap(27)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(FM)
-						.addComponent(AM))
+						.addComponent(AM)
+						.addComponent(FM))
 					.addGap(18)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_1))
-					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblNewLabel_2))
@@ -219,16 +188,13 @@ public class GUI {
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblNewLabel_3))
-					.addGap(18)
+					.addGap(29)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(Guardar)
 						.addComponent(Anterior)
 						.addComponent(Siguiente))
-					.addGap(3)
-					.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap())
+					.addGap(47))
 		);
 		
 		lblNewLabel_4 = new JLabel("Emisoras");
