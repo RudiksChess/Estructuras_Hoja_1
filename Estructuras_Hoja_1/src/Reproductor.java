@@ -1,5 +1,5 @@
 
-public class Reproductor implements Radio {
+public class Reproductor implements RadioInterface {
 	
 	private double frecuencias[]; 
 	private double favoritas[];
@@ -42,7 +42,6 @@ public class Reproductor implements Radio {
 	}
 
 
-	@Override
 	public void guardar(int indice, int nuevo) {
 		favoritas[indice] = nuevo;
 	}
