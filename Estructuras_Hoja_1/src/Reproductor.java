@@ -42,7 +42,7 @@ public class Reproductor implements RadioInterface {
 	}
 
 
-	public void guardar(int indice, int nuevo) {
+	public void guardar(int indice, double nuevo) {
 		favoritas[indice] = nuevo;
 	}
 
