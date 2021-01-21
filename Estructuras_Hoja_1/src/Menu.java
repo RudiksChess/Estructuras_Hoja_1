@@ -25,8 +25,8 @@ public class Menu {
 		double[] AM_fav={870,880,890,900,910,920};
 		double[] FM_fav= {99.9,100.1,100.3,100.5,100.7,100.9};
 		Scanner entrada = new Scanner(System.in);
-		Reproductor rAM=  new Reproductor(AM,AM_fav,0);
-		Reproductor rFM=  new Reproductor(FM,FM_fav,101);
+		Reproductor rAM=  new Reproductor(AM,AM_fav,30);
+		Reproductor rFM=  new Reproductor(FM,FM_fav,20);
 		
 		
 		
