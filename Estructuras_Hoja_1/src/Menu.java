@@ -36,14 +36,14 @@ public class Menu {
 			System.out.println("2.Apagar");
 			int a= entrada.nextInt();
 			if (a == 1){
-				System.out.println("Seleccione su emisora ");
-				System.out.println("1. AM");
+				System.out.println("Seleccione su emisora: ");
+				System.out.println("1.AM");
 				System.out.println("2.FM");
 				int dato = entrada.nextInt();
 				if (dato == 1){
 					System.out.println("###########EMISORA###########");
-					System.out.println("###########"+rAM.actual());
-					System.out.println("\n MENU:\n 1.siguiente  \n 2.Retroceder     \n3.Guardar  \n 4, Lista de favoritas ");
+					System.out.println("###########"+rAM.actual()+"###########");
+					System.out.println("\n MENU:\n 1.Siguiente  \n 2.Retroceder     \n3.Guardar  \n 4, Lista de favoritas ");
 					int index = entrada.nextInt();
 					if(index == 1){
 						int b = rAM.continuar();
@@ -54,11 +54,11 @@ public class Menu {
 						System.out.println("Su emisora actual es:"+ AM[x]);
 						
 					}else if(index == 3){
-						System.out.println("Ingrse el indice en el que desea agregar");
+						System.out.println("Ingrese el indice en el que desea agregar:");
 						int indice = entrada.nextInt();
 						double nuevo = rAM.actual();
 						rAM.guardar(indice,nuevo);
-						System.out.println("su nueva emisora"+nuevo+"se ha guardado con exito");
+						System.out.println("Su nueva emisora"+nuevo+"se ha guardado con exito.");
 						
 						
 						
@@ -72,8 +72,8 @@ public class Menu {
 					}
 				}else if (dato == 2){
 					System.out.println("###########EMISORA###########");
-					System.out.println("###########"+rFM.actual());
-					System.out.println("\n MENU:\n 1.siguiente  \n 2.Retroceder    \n3.Guardar  \n 4, Lista de favoritas ");
+					System.out.println("###########"+rFM.actual()+"###########");
+					System.out.println("\n MENU:\n 1.Siguiente  \n 2.Retroceder    \n3.Guardar  \n 4, Lista de favoritas ");
 					int index = entrada.nextInt();
 					if(index == 1){
 						int c = rFM.continuar();
@@ -84,11 +84,11 @@ public class Menu {
 						System.out.println("Su emisora actual es:"+FM[d]);
 						
 					}else if(index == 3){
-						System.out.println("Ingrse el indice en el que desea agregar");
+						System.out.println("Ingrese el indice en el que desea agregar");
 						int indice1 = entrada.nextInt();
 						double nuevo1 = rFM.actual();
 						rAM.guardar(indice1,nuevo1);
-						System.out.println("su nueva emisora"+nuevo1+"se ha guardado con exito");
+						System.out.println("Su nueva emisora"+nuevo1+"se ha guardado con exito.");
 						
 					}else if( index == 4){
 					System.out.println("Sus emisoras favoritas son:");

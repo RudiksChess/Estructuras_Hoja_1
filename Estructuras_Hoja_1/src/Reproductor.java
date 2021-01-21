@@ -11,11 +11,20 @@ public class Reproductor implements RadioInterface {
 		this.favoritas = favoritas;
 		this.contador = contador;
 	}
-
+	
+	/**
+	* Se utiliza para determinar la frecuencia actual que se está reproduciendo. 
+	* @param  ninguno
+	* @return la posición del array, según el contador. 
+	*/
 	public double actual() {
 		return frecuencias[contador];
 	}
-	
+	/**
+	* Se utiliza para moverse hacia delante en el contador de emisoras.  
+	* @param  ninguno
+	* @return la suma del contador +1  
+	*/
 	@Override
 	public int continuar() {
 		
@@ -28,7 +37,11 @@ public class Reproductor implements RadioInterface {
 			return contador;}
 	}
 
-
+	/**
+	* Se utiliza para moverse hacia atrás en el contador de emisoras.  
+	* @param  ninguno
+	* @return la resta del contador -1  
+	*/
 	@Override
 	public int retroceder() {
 		if (contador ==0) {
@@ -40,7 +53,12 @@ public class Reproductor implements RadioInterface {
 		contador = contador -1;
 		return contador;}
 	}
-
+	/**
+	* Se utiliza para guardar las emisoras favoritas en un array.   
+	* @param  indice, de donde lo quiere ubicar su nueva emisora. 
+	* @param nuevo, la emisora favorita que quiere guardar
+	* @return se modifica el array de favoritas.  
+	*/
 
 	public void guardar(int indice, double nuevo) {
 		favoritas[indice] = nuevo;
