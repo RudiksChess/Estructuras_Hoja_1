@@ -56,8 +56,7 @@ public class Menu {
 					}else if(index == 3){
 						System.out.println("Ingrse el indice en el que desea agregar");
 						int indice = entrada.nextInt();
-						System.out.println("Ingrse su nueva emisora");
-						int nuevo = entrada.nextInt();
+						double nuevo = rAM.actual();
 						rAM.guardar(indice,nuevo);
 						System.out.println("su nueva emisora"+nuevo+"se ha guardado con exito");
 						
@@ -87,8 +86,7 @@ public class Menu {
 					}else if(index == 3){
 						System.out.println("Ingrse el indice en el que desea agregar");
 						int indice1 = entrada.nextInt();
-						System.out.println("Ingrse su nueva emisora");
-						int nuevo1 = entrada.nextInt();
+						double nuevo1 = rFM.actual();
 						rAM.guardar(indice1,nuevo1);
 						System.out.println("su nueva emisora"+nuevo1+"se ha guardado con exito");
 						
