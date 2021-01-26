@@ -4,6 +4,7 @@ public class Reproductor implements RadioInterface {
 	private double frecuencias[]; 
 	private double favoritas[];
 	private int contador;
+	private boolean AM;
 	
 	
 	public Reproductor(double[] frecuencias, double[] favoritas, int contador) {
@@ -63,7 +64,15 @@ public class Reproductor implements RadioInterface {
 	public void guardar(int indice, double nuevo) {
 		favoritas[indice] = nuevo;
 	}
-
+	
+	@Override
+	public void aumentarEmisoraActual(boolean AM) {
+		//no implementado
+		this.AM=AM;
+		
+	}
+	
+	
 
 
 }

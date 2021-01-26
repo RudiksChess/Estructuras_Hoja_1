@@ -1,4 +1,9 @@
-
+/**
+  	Hoja de trabajo 1 
+	* @author Rudik Rompich
+	* @author Estefania Elvira 
+	* @version 1.0 
+	*/
 import java.util.Scanner;
 public class Menu {
 
