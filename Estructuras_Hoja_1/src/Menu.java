@@ -36,7 +36,7 @@ public class Menu {
 		
 		
 		while(opcion != 6){
-			System.out.println("Que desea hacer?");
+			System.out.println("Seleccione una opcion:");
 			System.out.println("1.Encender");
 			System.out.println("2.Apagar");
 			int a= entrada.nextInt();
@@ -48,7 +48,7 @@ public class Menu {
 				if (dato == 1){
 					System.out.println("###########EMISORA###########");
 					System.out.println("###########"+rAM.actual()+"###########");
-					System.out.println("\n MENU:\n 1.Siguiente  \n 2.Retroceder     \n3.Guardar  \n 4, Lista de favoritas ");
+					System.out.println("\n MENU:\n 1.Siguiente  \n 2.Retroceder     \n 3.Guardar  \n 4.Lista de favoritas ");
 					int index = entrada.nextInt();
 					if(index == 1){
 						int b = rAM.continuar();
@@ -78,7 +78,7 @@ public class Menu {
 				}else if (dato == 2){
 					System.out.println("###########EMISORA###########");
 					System.out.println("###########"+rFM.actual()+"###########");
-					System.out.println("\n MENU:\n 1.Siguiente  \n 2.Retroceder    \n3.Guardar  \n 4, Lista de favoritas ");
+					System.out.println("\n MENU:\n 1.Siguiente  \n 2.Retroceder    \n 3.Guardar  \n 4.Lista de favoritas ");
 					int index = entrada.nextInt();
 					if(index == 1){
 						int c = rFM.continuar();
